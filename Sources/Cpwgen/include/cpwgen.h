@@ -9,6 +9,8 @@
 #ifndef cpwgen_h
 #define cpwgen_h
 
-
+// pwgen headers
+#include "../lib/pwgen.h"
+#include "../lib/sha1.h"
 
 #endif /* cpwgen_h */
