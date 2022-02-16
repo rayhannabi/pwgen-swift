@@ -1,5 +1,5 @@
-import XCTest
 @testable import PwgenSwift
+import XCTest
 
 final class PwgenSwiftTests: XCTestCase {
     func testExample() throws {

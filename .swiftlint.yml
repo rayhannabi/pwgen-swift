@@ -1,0 +1,10 @@
+included:
+  - Sources/PwgenSwift
+  - Tests/PwgenSwiftTests
+
+line_length: 120
+file_length:
+  warning: 500
+  error: 1200
+
+
