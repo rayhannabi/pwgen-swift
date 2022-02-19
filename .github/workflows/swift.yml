@@ -20,10 +20,7 @@ jobs:
         run: make build
         
       - name: Run tests
-        run: |
-          swift package generate-xcodeproj
-          xcodebuild test -scheme PwgenSwift-Package -derivedDataPath .build/derived -destination platform=macOS -enableCodeCoverage YES | xcpretty
+        run: make test
         
       - name: Codecov
-        run: |
-          curl -s https://codecov.io/bash | bash
+        uses: codecov/codecov-action@v2.1.0
