@@ -25,4 +25,5 @@ jobs:
           xcodebuild test -scheme PwgenSwift-Package -derivedDataPath .build/derived -destination platform=macOS -enableCodeCoverage YES | xcpretty
         
       - name: Codecov
-        uses: codecov/codecov-action@v2.1.0
+        run: |
+          curl -s https://codecov.io/bash | bash
