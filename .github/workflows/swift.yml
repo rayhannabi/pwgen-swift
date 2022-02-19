@@ -24,3 +24,8 @@ jobs:
         
       - name: Codecov
         uses: codecov/codecov-action@v2.1.0
+        with:
+          file: ./.build/debug/codecov/PwgenSwift.json
+          flags: unittest
+          fail_ci_if_error: true
+          verbose: true
