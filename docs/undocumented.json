@@ -1,0 +1,61 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/PasswordError.swift",
+      "line": 14,
+      "symbol": "PasswordError.invalidLength",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/PasswordError.swift",
+      "line": 15,
+      "symbol": "PasswordError.encodingError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/PasswordError.swift",
+      "line": 16,
+      "symbol": "PasswordError.hashSeedPathMissing",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/PasswordError.swift",
+      "line": 17,
+      "symbol": "PasswordError.hashSeedPathError",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/Typealias.swift",
+      "line": 10,
+      "symbol": "PWFlag",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/Typealias.swift",
+      "line": 11,
+      "symbol": "PWLength",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/Typealias.swift",
+      "line": 12,
+      "symbol": "CCharPointer",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/rayhan/lab/xcode/clib/PwgenSwift/Sources/PwgenSwift/Typealias.swift",
+      "line": 13,
+      "symbol": "CGeneratorFunction",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/rayhan/lab/xcode/clib/PwgenSwift"
+}
