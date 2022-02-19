@@ -1,23 +1,31 @@
-.DEFAULT_GOAL:= build
+YELLOW=\033[1;33m
+NC=\033[0m
 
-.PHONY: check build test docs clean
+.DEFAULT_GOAL:= default
 
-check:
+.PHONY: default tools format build test docs clean
 
-build: check
+default: tools format build
+
+tools:
+	@./scripts/tools.sh
+
+format:
+	@echo "${YELLOW}Formatting${NC}"
+	@swiftformat .
+	@MODE=xcode ./scripts/lint.sh
+
+build:
+	@echo "${YELLOW}Building${NC}"
 	@swift build -v
 
 test:
+	@echo "${YELLOW}Testing${NC}"
 	@swift test -v
 
 docs:
-	@echo "Generating docs"
+	@./scripts/docc.sh
 
 clean:
-	@echo "Cleaning build directory"
+	@echo "${YELLOW}Cleaning up${NC}"
 	@rm -rf .build
-
-lint:
-	@swiftformat .
-	@swiftlint 
-
