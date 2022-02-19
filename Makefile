@@ -21,7 +21,7 @@ build:
 
 test:
 	@echo "${YELLOW}Testing${NC}"
-	@swift test -v
+	@swift test -v --enable-code-coverage
 
 docs:
 	@./scripts/docc.sh
