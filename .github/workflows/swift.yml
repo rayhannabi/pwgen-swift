@@ -23,7 +23,7 @@ jobs:
         run: make test.ci
         
       - name: Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@v1
         with:
           token: b435afb8-8a22-4b18-bf81-bec2f65ab059
           flags: unittest
