@@ -20,4 +20,13 @@ xcodebuild test \
     -scheme PwgenSwift-Package \
     -derivedDataPath .build/derived \
     -destination platform=macOS \
-    -enableCodeCoverage YES
+    -enableCodeCoverage YES |
+    xcpretty
+
+echo -e "${YELLOW}Generating coverage report${NC}"
+
+XCRESULT_PATH=$(find .build -type d -name '*.xcresult' -print -quit)
+echo "xcresult path: $XCRESULT_PATH"
+
+REPORT_PATH='.build/codecov.json'
+xcrun xccov view --report --json $XCRESULT_PATH | tee $REPORT_PATH
