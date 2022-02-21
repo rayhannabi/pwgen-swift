@@ -15,18 +15,29 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: "true"
-          
+
       - name: Build
         run: make build
-        
+
       - name: Run tests
-        run: make test
-        
-      - name: Codecov
-        uses: codecov/codecov-action@v2.1.0
+        run: make test.ci
+
+      - name: Coverage report
+        run: |
+          gem install slather
+          make report
+
+      - name: Codacy
+        uses: codacy/codacy-coverage-reporter-action@v1
         with:
-          token: b435afb8-8a22-4b18-bf81-bec2f65ab059
-          file: ./.build/debug/codecov/PwgenSwift.json
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: .build/report/cobertura.xml
+
+      - name: Codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_PROJECT_TOKEN }}
+          file: .build/report/cobertura.xml
           flags: unittest
           fail_ci_if_error: true
           verbose: true

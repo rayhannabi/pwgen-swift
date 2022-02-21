@@ -3,7 +3,7 @@ NC=\033[0m
 
 .DEFAULT_GOAL:= default
 
-.PHONY: default tools format build test docs clean
+.PHONY: default tools format build test test.ci report docs clean
 
 default: tools format build
 
@@ -21,7 +21,15 @@ build:
 
 test:
 	@echo "${YELLOW}Testing${NC}"
-	@swift test -v --enable-code-coverage
+	@swift test -v
+
+test.ci:
+	@echo "${YELLOW}Testing (CI)${NC}"
+	@./scripts/test.sh
+
+report:
+	@echo "${YELLOW}Generating coverage report${NC}"
+	@./scripts/report.sh
 
 docs:
 	@./scripts/docc.sh

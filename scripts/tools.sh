@@ -24,6 +24,7 @@ program_exists brew
 program_exists gem
 program_exists jazzy
 program_exists xcpretty
+program_exists slather
 program_exists swiftformat
 program_exists swiftlint
 program_exists swift
